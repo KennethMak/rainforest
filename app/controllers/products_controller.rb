@@ -23,7 +23,7 @@ class ProductsController < ApplicationController
   	@product = Product.new(product_params)
 
   	if @product.save
-  		redirect to products_url
+  		redirect to products_url 	
   	else
   		render :new
   	end

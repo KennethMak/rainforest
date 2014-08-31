@@ -19,12 +19,11 @@ Rails.application.routes.draw do
 resources :products
 resources :users, only: [:new, :create]
 resources :sessions, only: [:new, :create, :destroy]
+resources :reviews, only: [:show, :create, :destroy]
 
-resources :products do
-  resources :reviews, only: [:show, :create, :destroy]
 end
 
-root "products#index"
+# root "products#index"
   # get 'products/index'
 
   # get 'products/show'
@@ -87,4 +86,3 @@ root "products#index"
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
